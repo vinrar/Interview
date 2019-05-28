@@ -1,21 +1,34 @@
 package Model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import sun.jvm.hotspot.debugger.Page;
+public class Pages
+{
+    private String address;
 
-@JsonPropertyOrder({"Pages"})
-public class Pages {
-    @JsonProperty("Pages")
-    private Page page;
+    private String[] links;
 
-    @JsonProperty("Pages")
-    public Page getPage() {
-        return page;
+    public String getAddress ()
+    {
+        return address;
     }
 
-    @JsonProperty("Pages")
-    public void setPage(Page page) {
-        this.page = page;
+    public void setAddress (String address)
+    {
+        this.address = address;
+    }
+
+    public String[] getLinks ()
+    {
+        return links;
+    }
+
+    public void setLinks (String[] links)
+    {
+        this.links = links;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [address = "+address+", links = "+links+"]";
     }
 }
